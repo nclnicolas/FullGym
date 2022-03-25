@@ -22,9 +22,8 @@
 }
 
 .nav-menu {
-    display: grid;
-    grid-auto-flow: column;
-    gap: 2em;
+    position: relative;
+    margin: 50px auto;
 }
 
 .item-menu {
@@ -41,6 +40,11 @@
     color: #fff;
     font-size: 25px;
     position: relative;
-    right: 470px;
-    top: 3px;
+    left: 10px;
+    top: 2px;
+}
+
+.logo-carro {
+    color: #f51d1d;
+    font-size: 23px;
 }
