@@ -48,3 +48,37 @@
     color: #f51d1d;
     font-size: 23px;
 }
+
+.resta {
+    color: #f51d1d;
+    font-size: 30px;
+    margin: 8px 10px;
+}
+
+.suma {
+    color: #f51d1d;
+    font-size: 30px;
+    margin: 8px 10px;
+}
+
+.conteo {
+    position: relative;
+    bottom: 10px;
+    font-size: 25px;
+    margin: 13px;
+}
+
+.btn-carrito {
+    top: 22px;
+    right: 108px;
+    position: relative;
+    border-bottom: 2px solid #000;
+    background: #333;
+    padding: 2px;
+    color: #fff;
+}
+
+.btn-carrito:hover {
+    background: #f51d1d;
+    border-bottom: 2px solid #333;
+}
