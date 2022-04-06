@@ -1,0 +1,11 @@
+.btn {
+    display: inline-block;
+    text-align: right;
+    right: -850px;
+    margin-top: 7px;
+}
+
+.logo-carro {
+    color: #262d8f;
+    font-size: 23px;
+}

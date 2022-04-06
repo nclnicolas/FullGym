@@ -1,5 +1,6 @@
-
-import './App.css';
+import './estilos/NavBar.css';
+import "./estilos/CartWidget.css"
+import "./estilos/ItemCount.css"
 import NavBar from "./components/NavBar";
 import ItemListContainer from './components/ItemListContainer';
 
@@ -8,7 +9,7 @@ function App() {
       <>
       
       <NavBar></NavBar>
-      <ItemListContainer props="Hola Mundo" /> 
+      <ItemListContainer /> 
       </>
     );
 }

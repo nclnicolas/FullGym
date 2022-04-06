@@ -1,0 +1,84 @@
+body {
+    background: #262d8f;
+}
+
+
+/* Contenedor de nuestras cards */
+
+.flip-card {
+    display: inline-block;
+    margin: 80px;
+    align-items: center;
+    background-color: transparent;
+    width: 500px;
+    height: 350px;
+    perspective: 1000px;
+}
+
+img {
+    width: 500px;
+    height: 350px;
+    /* Eliminamos fondo de la image */
+    filter: brightness(1.1);
+    mix-blend-mode: multiply;
+    /* --------------------------- */
+    border-radius: 20px;
+}
+
+
+/* Contenedor para colocar la card frontal y la reversa*/
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+
+/* Giro cuando pasamos el mouse sobre el contenedor*/
+
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+
+/* posicion del frente y dorso */
+
+.flip-card-front,
+.flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+
+/* estilo a la parte trasera */
+
+.flip-card-back {
+    background-color: #48e;
+    color: #fff;
+    transform: rotateY(180deg);
+    border-radius: 20px;
+}
+
+.button {
+    border: none;
+    outline: none;
+    height: 40px;
+    width: 140px;
+    background: #ce9f11;
+    font-size: 15px;
+    border-radius: 20px;
+    transition: .3s ease;
+}
+
+.button:hover {
+    cursor: pointer;
+    background: #ffc000;
+    box-shadow: 0 0 5px #ffc000, 0 0 20px #ffc000, 0 0 60px #ffc000, 0 0 150px #ffc000;
+}

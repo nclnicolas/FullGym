@@ -1,0 +1,53 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.nav {
+    background-color: #48e;
+}
+
+.nav__li {
+    display: inline-block;
+    margin: 5px;
+    color: #fff;
+    position: relative;
+    left: 350px;
+    top: 10px;
+}
+
+.nav__li:hover>a {
+    color: #bbb;
+}
+
+.nav__li:hover {
+    color: #bbb;
+}
+
+.nav__li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.logo-menu {
+    color: #262d8f;
+    font-size: 38px;
+}
+
+.logo {
+    color: #fff;
+    font-size: 25px;
+    position: relative;
+    left: 10px;
+    top: 20px;
+    animation: transladar 3s alternate infinite;
+}
+
+@keyframes transladar {
+    0% {
+        transform: translate(0);
+    }
+    100% {
+        transform: translate(100px);
+    }
+}
