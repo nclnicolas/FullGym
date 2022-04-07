@@ -122,11 +122,4 @@ const productos = [{
     }
 
 ];
-
-export const getProductos = () => {
-    return new Promise((resolve, reject) => {
-        setTimeout(() => {
-            return resolve(productos);
-        }, 2000);
-    })
-}
+export default productos;

@@ -1,4 +1,3 @@
-import ItemCount from "./ItemCount";
 import "../estilos/Item.css"
 
 export default function Item({ imagen,description, stock, precio,name }) {
