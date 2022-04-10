@@ -11,11 +11,11 @@ export default function ItemDetail({ item }) {
     return (
         <>
             <div className="card">
-                <img src={item.imagen} alt="Denim Jeans"></img>
+                <img src={item.imagen} alt="Los Mejores Calzados"></img>
                     <h1>{item.description}</h1>
                     <p className="price">${item.price}</p>
                     <p>Stock:{item.stock }</p>
-                    <p><button>Add to Cart</button></p>
+                    <p><button>Añadir al carro</button></p>
                 <ItemCount stock={item.stock} initial={1} onAdd={onAdd} />
             </div>
 

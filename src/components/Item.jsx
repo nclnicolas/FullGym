@@ -1,6 +1,10 @@
 import "../estilos/Item.css"
+import {Link} from "react-router-dom";
+import ItemDetail from "./ItemDetail";
+import ItemDetailContainer from "./ItemDetailContainer";
 
-export default function Item({ imagen,description, stock, precio,name }) {
+
+export default function Item({id, imagen,description, stock, precio,name }) {
     return (
         <>
             <div className="flip-card">
@@ -11,7 +15,7 @@ export default function Item({ imagen,description, stock, precio,name }) {
                     <div className="flip-card-back">
                         <h1>{name}</h1>
                         <p>En stock: {stock}</p>
-                        <button className="button">Detalles</button>
+                        <Link to={`item/${id}`}><button className="button">Detalles</button></Link>
                     </div>
                 </div>
             </div>

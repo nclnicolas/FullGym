@@ -4,8 +4,8 @@ import { faAnglesUp } from "@fortawesome/free-solid-svg-icons";
 import { faAnglesDown } from "@fortawesome/free-solid-svg-icons";
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-const ItemCount = ({stock, initial, onAdd}) => {
-    const [rate, setRate] = useState(0);
+const ItemCount = ({stock, initial}) => {
+    const [rate, setRate] = useState(1);
 
     useEffect(()=>{
         setRate(initial);

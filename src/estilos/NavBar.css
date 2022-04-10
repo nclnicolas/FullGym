@@ -3,8 +3,13 @@
     padding: 0;
 }
 
+.link__logo {
+    text-decoration: none;
+}
+
 .nav {
     background-color: #48e;
+    height: 54px;
 }
 
 .nav__li {
@@ -38,9 +43,23 @@
     color: #fff;
     font-size: 25px;
     position: relative;
-    left: 10px;
-    top: 20px;
+    left: 163px;
+    bottom: 40px;
     animation: transladar 3s alternate infinite;
+}
+
+.nav__li_marca {
+    display: inline-block;
+    margin: 5px;
+    color: #fff;
+    position: relative;
+    left: 470px;
+    top: 10px;
+}
+
+.nav__li_marca img {
+    height: 100px;
+    width: 100px;
 }
 
 @keyframes transladar {

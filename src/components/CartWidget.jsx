@@ -4,14 +4,14 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 const CartWidget = () => {
     return (
-        <button type="button" class="btn position-relative">
+        <button type="button" className="btn position-relative">
             <FontAwesomeIcon icon={faCartShopping} className="logo-carro" />
-            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-primary">
+            <span className="span-logo translate-middle badge rounded-pill bg-primary">
                 4
-                <span class="visually-hidden">unread messages</span>
+                <span className="visually-hidden">unread messages</span>
             </span>
         </button>
     );
 }
-
+/* position-absolute top-50 start-50 translate-middle badge rounded-pill bg-primary */
 export default CartWidget;
