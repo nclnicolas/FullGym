@@ -4,12 +4,12 @@ import { faAnglesUp } from "@fortawesome/free-solid-svg-icons";
 import { faAnglesDown } from "@fortawesome/free-solid-svg-icons";
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-const ItemCount = ({stock, initial}) => {
-    const [rate, setRate] = useState(1);
+const ItemCount = ({stock = 0, initial = 1, onAdd}) => {
+    const [rate, setRate] = useState(0);
 
     useEffect(()=>{
         setRate(initial);
-    },[initial]);
+    },[]);
 
     const increment = () => {
         if (rate < stock) {
@@ -17,7 +17,7 @@ const ItemCount = ({stock, initial}) => {
         }
     }
     const decrease = () => {
-        if (rate > initial) {
+        if (rate > initial+1) {
             setRate(rate - 1);
         }
     }
@@ -25,8 +25,13 @@ const ItemCount = ({stock, initial}) => {
     return (
         <div>
             <a onClick={decrease}><FontAwesomeIcon icon={faAnglesDown} className="resta" /></a>
-            <b className="conteo">{initial}</b>
+            <b className="conteo">{rate}</b>
             <a onClick={increment}><FontAwesomeIcon icon={faAnglesUp} className="suma" /></a>
+            {
+                stock && rate
+                ? <button onClick={() => onAdd=(rate)}>Añadir al carrito</button>
+                : <button>Añadir al carrito</button>
+            }
             
         </div>
 
