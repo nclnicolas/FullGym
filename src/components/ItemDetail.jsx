@@ -10,7 +10,7 @@ const ItemDetail = ({ item }) =>{
 
     //Se muestra un alert al agregar los articulos
     const onAdd = (qty) => {
-        alert(`${qty} Se agrego al carrito`);
+        alert(`${qty} cantidades de ${item.description} han agregado al carrito`);
         setItemCount(qty);
     }
 
@@ -26,10 +26,10 @@ const ItemDetail = ({ item }) =>{
                 <p>Stock:{item.stock}</p>
                 {
                 itemCount === 0
-
                     ? <ItemCount stock={item.stock} initial={itemCount} onAdd={onAdd} />
                     : <Link to="/cart"><button>Ir al carrito</button></Link>
                 }
+                {console.log(itemCount)}
             </div>
             :<p>Cargando</p>
 }

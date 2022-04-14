@@ -29,7 +29,7 @@ const ItemCount = ({stock = 0, initial = 1, onAdd}) => {
             <a onClick={increment}><FontAwesomeIcon icon={faAnglesUp} className="suma" /></a>
             {
                 stock && rate
-                ? <button onClick={() => onAdd=(rate)}>Añadir al carrito</button>
+                ? <button onClick={() => onAdd(rate)}>Añadir al carrito</button>
                 : <button>Añadir al carrito</button>
             }
             
