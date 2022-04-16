@@ -1,17 +1,21 @@
 import { Button } from "bootstrap";
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import "../estilos/ItemDetail.css"
+import "../estilos/ItemList.css"
+import { CartContext } from "./CartContext";
 import ItemCount from "./ItemCount"
 
 const ItemDetail = ({ item }) =>{
 
     const [itemCount, setItemCount] = useState(0);
+    const test = useContext(CartContext);
 
     //Se muestra un alert al agregar los articulos
     const onAdd = (qty) => {
-        alert(`${qty} cantidades de ${item.description} han agregado al carrito`);
+        alert(`${qty} cantidad de ${item.description} se han agregado al carrito`);
         setItemCount(qty);
+        test.addToCart(item, qty);
     }
 
     return (
@@ -29,9 +33,8 @@ const ItemDetail = ({ item }) =>{
                     ? <ItemCount stock={item.stock} initial={itemCount} onAdd={onAdd} />
                     : <Link to="/cart"><button>Ir al carrito</button></Link>
                 }
-                {console.log(itemCount)}
             </div>
-            :<p>Cargando</p>
+            :<div className="spinner"></div>
 }
 
         </>

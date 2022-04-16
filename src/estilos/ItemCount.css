@@ -10,24 +10,9 @@
     margin: 8px 10px;
 }
 
-.btn-carrito {
-    top: 22px;
-    right: 108px;
-    position: relative;
-    border-bottom: 2px solid #000;
-    background: #333;
-    padding: 2px;
-    color: #fff;
-}
-
 .conteo {
     position: relative;
     bottom: 10px;
     font-size: 25px;
     margin: 13px;
-}
-
-.btn-carrito:hover {
-    background: #f51d1d;
-    border-bottom: 2px solid #333;
 }

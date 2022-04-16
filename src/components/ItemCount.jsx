@@ -1,11 +1,14 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAnglesUp } from "@fortawesome/free-solid-svg-icons";
 import { faAnglesDown } from "@fortawesome/free-solid-svg-icons";
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { CartContext } from "./CartContext";
 
 const ItemCount = ({stock = 0, initial = 1, onAdd}) => {
     const [rate, setRate] = useState(0);
+    const Count = useContext(CartContext);
+    
 
     useEffect(()=>{
         setRate(initial);

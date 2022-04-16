@@ -14,7 +14,7 @@ const productos = [{
         price: 13455,
         name: "Nike",
         stock: 20,
-        description: "Zapatallivas deportivas Nike",
+        description: "Zapatillas deportivas Nike",
         idCategory: 1,
         imagen: ["https://img2.freepng.es/20180917/qbp/kisspng-nike-free-sports-shoes-sportswear-5b9f2e95823118.3429954315371588055333.jpg"]
     },
