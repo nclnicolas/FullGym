@@ -74,3 +74,19 @@
     width: 200px;
     height: 200px;
 }
+
+.compra-final {
+    border: 1px solid #000;
+    height: 200px;
+    width: 300px;
+    position: relative;
+    left: 1020px;
+    bottom: 450px;
+    color: #fff;
+    text-align: center;
+}
+
+.compra-final h4 {
+    color: #48e;
+    text-align: center;
+}

@@ -38,8 +38,48 @@ const CartContextProvider = ({children})=>{
         
     }
 
+    //Total del carrito
+    const totalItem = (idItem) => {
+        let total = cartList.map(item => item.idItem).indexOf(idItem);
+        return cartList[total].priceItem * cartList[total].contarItem;
+    }
+
+    //Subtotal de la compra
+    const subTotal = () => {
+    let subCompra = cartList.map(item => totalItem(item.idItem));
+    return subCompra.reduce((prevValue, currValue) => prevValue + currValue);
+    }
+
+    //Impuesto del IVA
+    const descuento = () =>{
+        return subTotal() * 0.1;
+        
+    }
+
+    //Total de la compra
+    const totalCompra = () =>{
+        return subTotal();
+    }
+
+    //Calculo de item en el carrito 
+    const calcItem = () =>{
+        let calc = cartList.map(item => item.contarItem);
+        return calc.reduce(((prevValue, currValue) => prevValue + currValue), 0);
+    }
+
+
+
     return(
-        <CartContext.Provider value={{cartList, addToCart, clear, removeItem}}> 
+        <CartContext.Provider value={{
+            cartList, 
+            addToCart, 
+            clear, 
+            removeItem, 
+            totalItem,
+            subTotal,
+            descuento,
+            totalCompra,
+            calcItem}}> 
             {children}
         </CartContext.Provider>
     );

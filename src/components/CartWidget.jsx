@@ -7,14 +7,14 @@ import { CartContext } from "./CartContext";
 
 const CartWidget = () => {
     const test = useContext(CartContext);
-    console.log("Cart desde cartwidget", test);
+    
     
     return (
         <Link to="/cart">
             <button type="button" className="btn position-relative">
                 <FontAwesomeIcon icon={faCartShopping} className="logo-carro" />
                 <span className="span-logo translate-middle badge rounded-pill bg-primary">
-                    4
+                    {test.calcItem()}
                     <span className="visually-hidden">unread messages</span>
                 </span>
             </button>

@@ -1,10 +1,9 @@
 import "../estilos/Item.css"
 import {Link} from "react-router-dom";
-import ItemDetail from "./ItemDetail";
-import ItemDetailContainer from "./ItemDetailContainer";
 
 
-export default function Item({id, imagen,description, stock, precio,name }) {
+
+export default function Item({id, imagen, stock,name }) {
     return (
         <>
             <div className="flip-card">
