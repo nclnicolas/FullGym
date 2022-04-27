@@ -1,27 +1,30 @@
-
 import ItemList from "./ItemList";
 import { useEffect, useState } from "react";
 import productos from "../utiles/productos";
 import customFetch from "../utiles/customFetch";
 import { useParams } from "react-router-dom";
+import { collection, getDocs } from "firebase/firestore";
+import db from "../utiles/FirebaseConfig";
 
 //Aca tenemos nuestros articulos
 const ItemListContainer = () => {
     const [datos, setProductos] = useState([]);
     const { idCategory } = useParams(); //HOOK
 
+//Obtenemos los productos con una promesa
     useEffect(() => {
-        //Obtenemos los productos con una promesa
-        if (idCategory == undefined) {
-            customFetch(2000, productos)
-                .then(result => setProductos(result))
-                .catch(err => console.log(err))
-        } else {
-            customFetch(2000, productos.filter(item => item.idCategory === parseInt(idCategory)))
-                .then(result => setProductos(result))
-                .catch(err => console.log(err))
+        const fetchFirestore = async () => {
+            const querySnapshot = await getDocs(collection(db, "products"));
+            const dataFirestore = querySnapshot.docs.map((doc) => ({
+                id: doc.id,
+                ...doc.data() //Esto significa el resto de la informacion
+            }));
+            return dataFirestore;
         }
-    }, [idCategory]);
+        fetchFirestore()
+        .then(result => setProductos(result))
+        .catch(err => console.log(err));
+    }, [datos]);
 
     return (
         <ItemList items={datos} />
