@@ -1,10 +1,17 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display+SC:wght@400;900&family=Prompt:wght@100&display=swap');
 .link__logo {
     text-decoration: none;
+    color: #fff;
+}
+
+.link__logo:hover {
+    color: #fff;
 }
 
 .nav {
@@ -39,15 +46,6 @@
     font-size: 38px;
 }
 
-.logo {
-    color: #fff;
-    font-size: 25px;
-    position: relative;
-    left: 163px;
-    bottom: 40px;
-    animation: transladar 3s alternate infinite;
-}
-
 .nav__li_marca {
     display: inline-block;
     margin: 5px;
@@ -62,11 +60,122 @@
     width: 100px;
 }
 
+.hide {
+    font-size: 22px;
+    padding: 16px;
+    background: #48e;
+    color: #fff;
+    display: none;
+}
+
 @keyframes transladar {
     0% {
         transform: translate(0);
     }
     100% {
         transform: translate(100px);
+    }
+}
+
+body {
+    font-family: 'Prompt', sans-serif;
+}
+
+header {
+    width: 100%;
+    color: #fff;
+    text-align: center;
+    background-color: #112d4e;
+}
+
+.lista-responsive {
+    background-color: #164884;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.lista-responsive li {
+    display: inline-block;
+    padding: 10px;
+    transition: all ease-in-out 250ms;
+}
+
+.lista-responsive li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.lista-responsive li:hover {
+    color: #bbb;
+}
+
+.lista-responsive li:hover>a {
+    color: #bbb;
+}
+
+.lista li:hover {
+    background: #112d4e;
+}
+
+.lista {
+    list-style: none;
+    background-color: #164884;
+}
+
+.lista li {
+    display: inline-block;
+    padding: 20px;
+    transition: all ease-in-out 250ms;
+}
+
+.lista li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.hiden {
+    font-size: 22px;
+    padding: 16px;
+    text-align: left;
+    background: #164884;
+    color: #fff;
+    cursor: pointer;
+    display: none;
+}
+
+.logo {
+    color: #fff;
+    font-size: 25px;
+    position: relative;
+    left: 100px;
+    bottom: 40px;
+}
+
+@media (max-width: 599px) {
+    .lista li {
+        width: 100%;
+        padding: 16px;
+        text-align: left;
+        display: inline-block;
+    }
+    .hiden {
+        display: block;
+    }
+    .lista-responsive {
+        display: none;
+    }
+    .nav__li_marca {
+        display: inline-block;
+        margin: 5px;
+        color: #fff;
+        position: relative;
+        left: 80px;
+        top: 10px;
+    }
+}
+
+@media(min-width: 600px) and (max-width: 1023px) {
+    .nav__li_marca {
+        left: 270px;
     }
 }

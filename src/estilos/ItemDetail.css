@@ -2,6 +2,7 @@
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     max-width: 500px;
     margin: auto;
+    margin-top: 10px;
     text-align: center;
     font-family: arial;
 }
@@ -29,4 +30,13 @@ img {
 
 .card button:hover {
     opacity: 0.7;
+}
+
+@media (max-width: 599px) {
+    .card {
+        max-width: 250px;
+    }
+    img {
+        width: 250px;
+    }
 }

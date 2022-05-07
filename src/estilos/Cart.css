@@ -31,19 +31,37 @@
 }
 
 .cart-products {
+    display: flex;
     position: relative;
     left: 5px;
-    max-width: 200px;
+    max-width: 250px;
+    height: 250px;
     text-align: center;
     background-color: #fff;
     margin: 4px;
-    display: inline-block;
-    height: 380px;
+    border-radius: 10px;
+}
+
+.cart-products .btn-delete {
+    background: none;
+    color: red;
+    font-size: 25px;
+}
+
+.cart-products .cont-detalle {
+    display: flex;
+    width: 600px;
+    align-items: center;
 }
 
 .cart-products .title-products {
-    color: grey;
+    display: flex;
+    align-items: center;
+    color: #fff;
     font-size: 18px;
+    width: 200px;
+    height: 80px;
+    justify-content: center;
 }
 
 .cart-products button {
@@ -71,29 +89,30 @@
 }
 
 .cart-products img {
-    width: 200px;
-    height: 200px;
+    width: 250px;
+    height: 265px;
 }
 
 .compra-final {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
     border: 1px solid #000;
     height: 200px;
     width: 300px;
-    position: relative;
     left: 1020px;
-    bottom: 450px;
+    bottom: 140px;
     color: #fff;
     text-align: center;
 }
 
-.btn-fin-compra {
+.compra-final .btn-fin-compra {
+    margin: auto;
     border: none;
     outline: 0;
-    display: inline-block;
     padding: 4px;
     color: #fff;
     background-color: #000;
-    text-align: center;
     cursor: pointer;
     width: 50%;
     font-size: 18px;
@@ -102,4 +121,58 @@
 .compra-final h4 {
     color: #48e;
     text-align: center;
+}
+
+@media (max-width: 599px) {
+    .cart {
+        margin: 3px;
+    }
+    .cart h1 {
+        font-size: 20px;
+    }
+    .cont-detalle {
+        display: flex;
+        flex-direction: column;
+    }
+    .cart button {
+        width: 85px;
+        position: relative;
+        right: 800px;
+        bottom: 10px;
+    }
+    .limp-carro {
+        border: 2px solid red;
+        position: relative;
+        left: -900px;
+        top: -75px;
+    }
+    .compra-final {
+        position: relative;
+        left: 100px;
+        bottom: 10px;
+    }
+}
+
+@media(min-width: 600px) and (max-width: 1100px) {
+    .cont-detalle {
+        display: flex;
+        flex-direction: column;
+    }
+    .cart button {
+        width: 85px;
+        position: relative;
+        right: 450px;
+        bottom: 10px;
+    }
+    .limp-carro {
+        border: 2px solid red;
+        position: relative;
+        left: -600px;
+        top: -75px;
+    }
+    .compra-final {
+        position: relative;
+        left: 550px;
+        bottom: 800px;
+    }
 }

@@ -82,3 +82,28 @@ img {
     background: #ffc000;
     box-shadow: 0 0 5px #ffc000, 0 0 20px #ffc000, 0 0 60px #ffc000, 0 0 150px #ffc000;
 }
+
+@media (max-width: 599px) {
+    .flip-card {
+        width: 250px;
+        height: 200px;
+    }
+    img {
+        max-width: 250px;
+        height: 250px;
+    }
+}
+
+@media(min-width: 600px) and (max-width: 1023px) {
+    .flip-card {
+        position: relative;
+        left: 150px;
+    }
+}
+
+@media(min-width: 1023px) and (max-width: 1310px) {
+    .flip-card {
+        position: relative;
+        left: 350px;
+    }
+}

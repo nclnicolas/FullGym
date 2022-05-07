@@ -8,10 +8,9 @@ import { CartContext } from "./CartContext";
 const CartWidget = () => {
     const test = useContext(CartContext);
     
-    
     return (
         <Link to="/cart">
-            <button type="button" className="btn position-relative">
+            <button type="button" className="btn ">
                 <FontAwesomeIcon icon={faCartShopping} className="logo-carro" />
                 <span className="span-logo translate-middle badge rounded-pill bg-primary">
                     {test.calcItem()}
@@ -21,5 +20,4 @@ const CartWidget = () => {
         </Link>
     );
 }
-/* position-absolute top-50 start-50 translate-middle badge rounded-pill bg-primary */
 export default CartWidget;

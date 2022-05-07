@@ -1,7 +1,5 @@
 import { useEffect, useState } from "react"
-import productos from "../utiles/productos";
 import ItemDetail from "./ItemDetail";
-import customFetch from "../utiles/customFetch";
 import { useParams } from "react-router-dom";
 import {detalleProducts} from "../utiles/fetchFirebase"
 

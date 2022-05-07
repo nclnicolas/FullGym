@@ -1,3 +1,4 @@
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { collection, increment, serverTimestamp, updateDoc } from "firebase/firestore";
 import { useContext } from "react";
 import { Link } from "react-router-dom";
@@ -5,6 +6,8 @@ import "../estilos/Cart.css"
 import { CartContext } from "./CartContext";
 import { doc, setDoc } from "firebase/firestore";
 import db from "../utiles/FirebaseConfig";
+import swal from "sweetalert";
+import { faTrashCan } from "@fortawesome/free-solid-svg-icons";
 
 const Cart = () => {
     const test = useContext(CartContext);
@@ -44,9 +47,14 @@ const Cart = () => {
             return newOrderRef;
         }
         createOrder()
-        .then(result => alert("Tu compra se realizo con exito\n Tu id es "+ result.id + " \nMuchas Gracias!!!"))
+        .then(result => swal({
+            title: "Su compra se realizo con exito",
+            text: `Su N° de ID es: ${result.id}`,
+            icon: "success",
+            button: "OK"
+        }))
         .catch(err => console.log(err));
-        test.clear();
+        test.clear()
     }
 
 
@@ -54,7 +62,7 @@ const Cart = () => {
         <>
             <div className="cart">
                 <h1>Tu carrito de compras</h1>
-                <Link to="/"><button>Seguir comprando</button></Link>
+                <Link to="/" className="seguir-compra"><button>Seguir comprando</button></Link>
 
                 {
                     (test.cartList.length > 0)
@@ -69,10 +77,12 @@ const Cart = () => {
                         <div className="cart-products">
                             <img src={item.imgItem}></img>
                             <h1>{item.name}</h1>
+                            <div className="cont-detalle">
                             <p className="title-products">Precio: ${item.priceItem}</p>
                             <p className="title-products">Cantidad: {item.contarItem}</p>
                             <p className="title-products">SubTotal:$ {test.totalItem(item.idItem)}</p>
-                            <p><button onClick={() => test.removeItem(item.idItem)}>Eliminar Producto</button></p>
+                            <p><button className="btn-delete" onClick={() => test.removeItem(item.idItem)}><FontAwesomeIcon icon={faTrashCan} /></button></p>
+                            </div>
                         </div>
                         
                     )
