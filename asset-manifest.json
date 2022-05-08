@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/fullgym/static/css/main.e77ae1b9.css",
+    "main.js": "/fullgym/static/js/main.106ddab9.js",
+    "static/js/787.d4d69d1e.chunk.js": "/fullgym/static/js/787.d4d69d1e.chunk.js",
+    "index.html": "/fullgym/index.html",
+    "main.e77ae1b9.css.map": "/fullgym/static/css/main.e77ae1b9.css.map",
+    "main.106ddab9.js.map": "/fullgym/static/js/main.106ddab9.js.map",
+    "787.d4d69d1e.chunk.js.map": "/fullgym/static/js/787.d4d69d1e.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e77ae1b9.css",
+    "static/js/main.106ddab9.js"
+  ]
+}
